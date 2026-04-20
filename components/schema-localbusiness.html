@@ -1,0 +1,92 @@
+<!-- ============================================================
+     COMPONENTE: SCHEMA MARKUP BASE (LocalBusiness + Physician + MedicalClinic)
+     Se inyecta en el <head> de cada página como JSON-LD
+     Las páginas añaden además su Service-specific schema individualmente
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["MedicalClinic", "LocalBusiness"],
+      "@id": "https://doctorcalvario.com/#clinica",
+      "name": "Dr. Calvario | Clínica Ortopédica en Puerto Vallarta",
+      "alternateName": ["Dr. Calvario Ortopedista", "Clínica Ortopédica Puerto Vallarta", "Dr. Calvario Traumatólogo"],
+      "description": "Clínica ortopédica en Puerto Vallarta dirigida por el Dr. Calvario, Traumatólogo y Ortopedista Naval. Atención especializada para adultos y niños en prótesis articulares, cirugía de fracturas, columna y ortopedia pediátrica.",
+      "url": "https://doctorcalvario.com/",
+      "logo": "https://doctorcalvario.com/logo.webp",
+      "image": "https://doctorcalvario.com/imagen1.webp",
+      "telephone": "+52-322-100-2451",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Puerto Vallarta",
+        "addressRegion": "Jalisco",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 20.627123,
+        "longitude": -105.252075
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Puerto Vallarta" },
+        { "@type": "City", "name": "Nuevo Vallarta" },
+        { "@type": "City", "name": "Bucerías" },
+        { "@type": "AdministrativeArea", "name": "Bahía de Banderas" },
+        { "@type": "Place", "name": "Zona Hotelera Norte" },
+        { "@type": "Place", "name": "Zona Hotelera Sur" },
+        { "@type": "Place", "name": "Marina Vallarta" },
+        { "@type": "Place", "name": "Centro Histórico Puerto Vallarta" },
+        { "@type": "Place", "name": "Fluvial Vallarta" },
+        { "@type": "Place", "name": "Versalles" },
+        { "@type": "Place", "name": "Díaz Ordaz" },
+        { "@type": "Place", "name": "Emiliano Zapata Puerto Vallarta" },
+        { "@type": "Place", "name": "5 de Diciembre" },
+        { "@type": "Place", "name": "Las Juntas" },
+        { "@type": "Place", "name": "Ixtapa Puerto Vallarta" },
+        { "@type": "Place", "name": "Pitillal" },
+        { "@type": "Place", "name": "Amapas" },
+        { "@type": "Place", "name": "Conchas Chinas" },
+        { "@type": "Place", "name": "Mismaloya" },
+        { "@type": "Place", "name": "Las Gaviotas" }
+      ],
+      "medicalSpecialty": ["Orthopedic", "OrthopedicSurgery", "PediatricOrthopedics", "Traumatology"],
+      "availableService": [
+        { "@type": "MedicalProcedure", "name": "Prótesis de Rodilla" },
+        { "@type": "MedicalProcedure", "name": "Prótesis de Cadera" },
+        { "@type": "MedicalProcedure", "name": "Artroscopia de Rodilla y Hombro" },
+        { "@type": "MedicalProcedure", "name": "Displasia de Cadera Infantil" },
+        { "@type": "MedicalProcedure", "name": "Pie Plano y Deformidades del Pie en Niños" },
+        { "@type": "MedicalProcedure", "name": "Fracturas y Lesiones Deportivas Pediátricas" },
+        { "@type": "MedicalProcedure", "name": "Cirugía de Fracturas y Osteosíntesis" },
+        { "@type": "MedicalProcedure", "name": "Cirugía de Columna" },
+        { "@type": "MedicalProcedure", "name": "Cirugía de Mano y Hombro" }
+      ],
+      "hasMap": "https://www.google.com/maps/place/Dr.+Calvario+%7C+Ortopedista%2FTraumatologo+Pto.+Vallarta+%7C+Orthopedic+Surgeon",
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://wa.me/523221002451",
+          "inLanguage": "es-MX",
+          "actionPlatform": ["http://schema.org/MobileWebPlatform", "http://schema.org/DesktopWebPlatform"]
+        },
+        "result": { "@type": "Reservation", "name": "Valoración ortopédica con el Dr. Calvario" }
+      }
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://doctorcalvario.com/#medico",
+      "name": "Dr. Calvario",
+      "alternateName": "Doctor Calvario",
+      "jobTitle": "Traumatólogo y Ortopedista Naval",
+      "worksFor": { "@id": "https://doctorcalvario.com/#clinica" },
+      "url": "https://doctorcalvario.com/sobre-el-dr-calvario.html",
+      "image": "https://doctorcalvario.com/imagen1.webp",
+      "medicalSpecialty": ["Orthopedic", "OrthopedicSurgery", "PediatricOrthopedics", "Traumatology"],
+      "areaServed": { "@type": "City", "name": "Puerto Vallarta" }
+    }
+  ]
+}
+</script>

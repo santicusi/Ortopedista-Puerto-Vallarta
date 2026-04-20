@@ -1,0 +1,85 @@
+<!-- ============================================================
+     COMPONENTE: HERO VIDEO — Solo para la página de inicio
+     Video de fondo + overlay naval + H1 + CTAs + tarjeta derecha
+     Sigue el estilo del header de medifet.com.mx
+     ============================================================ -->
+<section class="hero" role="banner">
+  <!-- Video de fondo -->
+  <video class="hero__video"
+         autoplay muted loop playsinline
+         poster="imagen1.jpg"
+         aria-hidden="true">
+    <source src="video1.mp4" type="video/mp4">
+  </video>
+
+  <!-- Overlay de color -->
+  <div class="hero__overlay" aria-hidden="true"></div>
+
+  <!-- Contenido -->
+  <div class="hero__inner">
+    <div class="hero__grid">
+
+      <!-- Lado izquierdo: copy + CTAs + métricas de confianza -->
+      <div>
+        <span class="hero__eyebrow">Traumatología · Ortopedia Naval · Puerto Vallarta</span>
+
+        <h1 class="hero__title">
+          Clínica Ortopédica en <em>Puerto Vallarta</em>
+        </h1>
+
+        <p class="hero__subtitle">
+          Atención ortopédica especializada para adultos y niños. Prótesis articulares, cirugía de fracturas, tratamiento de columna y ortopedia pediátrica con el Dr. Calvario, Traumatólogo y Ortopedista Naval.
+        </p>
+
+        <div class="hero__ctas">
+          <a class="btn btn--whatsapp btn--lg"
+             href="https://wa.me/523221002451?text=Hola%20Dr.%20Calvario%2C%20me%20gustar%C3%ADa%20agendar%20una%20valoraci%C3%B3n%20ortop%C3%A9dica."
+             target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar valoración
+          </a>
+          <a class="btn btn--ghost-light btn--lg" href="sobre-el-dr-calvario.html">
+            Conocer al Dr. Calvario
+          </a>
+        </div>
+
+        <!-- Métricas de confianza -->
+        <div class="hero__trust">
+          <div class="hero__trust-item">
+            <span class="hero__trust-label">Enfoque</span>
+            <span class="hero__trust-value">Adultos y niños</span>
+          </div>
+          <div class="hero__trust-item">
+            <span class="hero__trust-label">Formación</span>
+            <span class="hero__trust-value">Médico-Naval</span>
+          </div>
+          <div class="hero__trust-item">
+            <span class="hero__trust-label">Ubicación</span>
+            <span class="hero__trust-value">Puerto Vallarta</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lado derecho: tarjeta con retrato del profesional + badge -->
+      <div class="hero__card">
+        <img src="imagen1.webp" alt="Dr. Calvario, Traumatólogo y Ortopedista Naval en Puerto Vallarta" width="480" height="640" loading="eager" />
+        <div class="hero__card-badge">
+          <div class="hero__card-badge-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0L12 5.36l-.77-.78a5.4 5.4 0 0 0-7.65 7.65l.77.78L12 20.66l7.65-7.65.77-.78a5.4 5.4 0 0 0 0-7.65z"/></svg>
+          </div>
+          <div class="hero__card-badge-text">
+            <span class="hero__card-badge-label">Dr. Calvario</span>
+            <span class="hero__card-badge-value">Traumatólogo · Ortopedista Naval</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Indicador de scroll -->
+  <div class="hero__scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>

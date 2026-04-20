@@ -1,1901 +1,378 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Calvario | Traumatólogo y Ortopedista en Puerto Vallarta</title>
-  <meta name="description" content="Dr. Calvario, especialista en traumatología y ortopedia en Puerto Vallarta. Atención de fracturas, lesiones y cirugía ortopédica. Consulta inmediata. Llame ahora.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/jpeg" href="logo.webp">
-
-  <!-- Google Ads Conversion Tracking -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17964727570"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17964727570');
-  </script>
-
-  <style>
-    :root {
-      --navy: #071525;
-      --navy-mid: #0e2340;
-      --navy-light: #163354;
-      --gold: #c9a84c;
-      --gold-light: #e2c06e;
-      --gold-pale: #f5e9c8;
-      --white: #ffffff;
-      --off-white: #f4f7fb;
-      --gray: #8a9bb0;
-      --gray-light: #dde5ef;
-      --text: #1c2b3a;
-      --whatsapp: #25D366;
-      --whatsapp-dark: #1da851;
-      --red-urgent: #c0392b;
-      --teal: #1a7fa8;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Nunito Sans', sans-serif;
-      color: var(--text);
-      background: var(--white);
-      overflow-x: hidden;
-    }
-
-    /* ====== STICKY HEADER ====== */
-    .sticky-header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      background: var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 24px;
-      height: 64px;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.4);
-      border-bottom: 1px solid rgba(201,168,76,0.2);
-    }
-
-    .header-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .header-logo-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-    }
-
-    .header-logo-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .header-logo-text strong {
-      font-family: 'Playfair Display', serif;
-      color: var(--white);
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.1;
-    }
-
-    .header-logo-text span {
-      color: var(--gold);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 600;
-    }
-
-    .header-cta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .btn-whatsapp-header {
-      background: var(--whatsapp);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-family: 'Nunito Sans', sans-serif;
-      font-weight: 800;
-      font-size: 13px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      transition: all 0.2s;
-      letter-spacing: 0.3px;
-    }
-
-    .btn-whatsapp-header:hover {
-      background: var(--whatsapp-dark);
-      transform: scale(1.03);
-    }
-
-    .btn-whatsapp-header svg {
-      width: 16px;
-      height: 16px;
-      fill: white;
-      flex-shrink: 0;
-    }
-
-    /* ====== URGENT BAR ====== */
-    .urgent-bar {
-      background: var(--red-urgent);
-      text-align: center;
-      padding: 10px 20px;
-      margin-top: 64px;
-    }
-
-    .urgent-bar p {
-      color: white;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-
-    .urgent-bar a {
-      color: #ffd0cc;
-      text-decoration: none;
-    }
-
-    /* ====== HERO ====== */
-    .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy-light) 100%);
-      min-height: 92vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding: 60px 0;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background:
-        radial-gradient(ellipse 70% 60% at 65% 40%, rgba(201,168,76,0.06) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(26,127,168,0.08) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 80px;
-      background: linear-gradient(to bottom, transparent, var(--off-white));
-      pointer-events: none;
-    }
-
-    /* Medical cross watermark */
-    .hero-watermark {
-      position: absolute;
-      right: -60px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 500px;
-      height: 500px;
-      opacity: 0.03;
-      pointer-events: none;
-    }
-
-    .hero-container {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(201,168,76,0.12);
-      border: 1px solid rgba(201,168,76,0.3);
-      color: var(--gold-light);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      padding: 7px 16px;
-      border-radius: 50px;
-      margin-bottom: 20px;
-    }
-
-    .hero-badge::before {
-      content: '';
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--gold);
-      box-shadow: 0 0 8px var(--gold);
-      animation: pulse-dot 1.5s ease-in-out infinite;
-    }
-
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.7); }
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(34px, 4vw, 56px);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1.12;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 em {
-      font-style: normal;
-      color: var(--gold);
-    }
-
-    .hero-subtitle {
-      color: rgba(255,255,255,0.7);
-      font-size: 17px;
-      line-height: 1.65;
-      margin-bottom: 34px;
-      font-weight: 400;
-    }
-
-    .hero-trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 36px;
-    }
-
-    .trust-chip {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.85);
-      font-size: 12px;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 50px;
-      letter-spacing: 0.3px;
-    }
-
-    .trust-chip span { font-size: 14px; }
-
-    .hero-cta-group {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .btn-whatsapp-main {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background: var(--whatsapp);
-      color: white;
-      text-decoration: none;
-      font-family: 'Nunito Sans', sans-serif;
-      font-weight: 800;
-      font-size: 17px;
-      padding: 18px 36px;
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(37,211,102,0.35);
-      transition: all 0.25s;
-      letter-spacing: 0.2px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-whatsapp-main:hover {
-      background: var(--whatsapp-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(37,211,102,0.45);
-    }
-
-    .btn-whatsapp-main svg {
-      width: 22px;
-      height: 22px;
-      fill: white;
-      flex-shrink: 0;
-    }
-
-    .hero-note {
-      color: rgba(255,255,255,0.4);
-      font-size: 12px;
-      font-weight: 400;
-      text-align: center;
-    }
-
-    /* Hero image side */
-    .hero-image-side {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-image-frame {
-      position: relative;
-      width: 100%;
-      max-width: 480px;
-    }
-
-    .hero-image-frame::before {
-      content: '';
-      position: absolute;
-      top: -16px;
-      right: -16px;
-      left: 16px;
-      bottom: 16px;
-      border: 1px solid rgba(201,168,76,0.25);
-      border-radius: 16px;
-      pointer-events: none;
-    }
-
-    .hero-image-main {
-      width: 100%;
-      aspect-ratio: 4/5;
-      object-fit: cover;
-      border-radius: 14px;
-      display: block;
-      background: var(--navy-light);
-    }
-
-    /* Floating stat card */
-    .hero-stat-card {
-      position: absolute;
-      bottom: -20px;
-      left: -30px;
-      background: white;
-      border-radius: 12px;
-      padding: 16px 20px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .stat-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--gold-pale);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      flex-shrink: 0;
-    }
-
-    .stat-text strong {
-      display: block;
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--navy);
-      font-family: 'Playfair Display', serif;
-      line-height: 1;
-    }
-
-    .stat-text span {
-      font-size: 11px;
-      color: var(--gray);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-    }
-
-    .hero-cert-badge {
-      position: absolute;
-      top: 20px;
-      left: -20px;
-      background: var(--navy);
-      border: 1px solid var(--gold);
-      border-radius: 10px;
-      padding: 12px 16px;
-      text-align: center;
-    }
-
-    .hero-cert-badge strong {
-      display: block;
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-    }
-
-    .hero-cert-badge span {
-      color: rgba(255,255,255,0.6);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* ====== QUICK SCENARIOS ====== */
-    .scenarios {
-      background: var(--off-white);
-      padding: 60px 24px;
-    }
-
-    .scenarios-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      text-align: center;
-      color: var(--gold);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(26px, 3vw, 40px);
-      font-weight: 700;
-      color: var(--navy);
-      text-align: center;
-      margin-bottom: 14px;
-      line-height: 1.2;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: var(--gray);
-      font-size: 16px;
-      max-width: 560px;
-      margin: 0 auto 48px;
-      line-height: 1.6;
-    }
-
-    .scenarios-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .scenario-card {
-      background: white;
-      border-radius: 16px;
-      padding: 28px 24px;
-      border: 1px solid var(--gray-light);
-      text-align: center;
-      transition: all 0.25s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .scenario-card::before {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--teal), var(--navy-light));
-      transform: scaleX(0);
-      transition: transform 0.3s;
-    }
-
-    .scenario-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(14,35,64,0.12);
-    }
-
-    .scenario-card:hover::before { transform: scaleX(1); }
-
-    .scenario-emoji {
-      font-size: 36px;
-      margin-bottom: 14px;
-      display: block;
-    }
-
-    .scenario-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 10px;
-      line-height: 1.3;
-    }
-
-    .scenario-card p {
-      font-size: 13px;
-      color: var(--gray);
-      line-height: 1.5;
-      margin-bottom: 18px;
-    }
-
-    .btn-scenario {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--whatsapp);
-      color: white;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 12px;
-      padding: 10px 18px;
-      border-radius: 50px;
-      transition: all 0.2s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-scenario:hover { background: var(--whatsapp-dark); transform: scale(1.04); }
-    .btn-scenario svg { width: 14px; height: 14px; fill: white; }
-
-    /* ====== ABOUT SECTION ====== */
-    .about {
-      padding: 90px 24px;
-      background: white;
-    }
-
-    .about-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .about-images {
-      position: relative;
-    }
-
-    .about-img-main {
-      width: 85%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      border-radius: 16px;
-      display: block;
-      background: var(--gray-light);
-    }
-
-    .about-img-secondary {
-      width: 55%;
-      aspect-ratio: 1/1;
-      object-fit: cover;
-      border-radius: 14px;
-      display: block;
-      background: var(--navy-light);
-      position: absolute;
-      bottom: -30px;
-      right: 0;
-      border: 4px solid white;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-    }
-
-    .about-gold-line {
-      width: 3px;
-      height: 60px;
-      background: linear-gradient(to bottom, var(--gold), transparent);
-      margin-bottom: 20px;
-    }
-
-    .about-content h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(28px, 3vw, 42px);
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 20px;
-      line-height: 1.18;
-    }
-
-    .about-content h2 em {
-      font-style: normal;
-      color: var(--teal);
-    }
-
-    .about-content p {
-      color: #4a5e72;
-      font-size: 16px;
-      line-height: 1.75;
-      margin-bottom: 18px;
-    }
-
-    .credentials-list {
-      list-style: none;
-      margin: 28px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .credentials-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      font-size: 14px;
-      color: var(--text);
-      line-height: 1.4;
-    }
-
-    .cred-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: var(--gold-pale);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 15px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .credentials-list li strong {
-      font-weight: 700;
-      color: var(--navy);
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .credentials-list li span {
-      color: var(--gray);
-      font-size: 13px;
-    }
-
-    /* ====== SERVICES ====== */
-    .services {
-      background: var(--navy);
-      padding: 90px 24px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .services::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .services-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .services .section-label { color: var(--gold-light); }
-    .services .section-title { color: var(--white); }
-    .services .section-subtitle { color: rgba(255,255,255,0.5); }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-    }
-
-    .service-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 32px 28px;
-      transition: all 0.3s;
-    }
-
-    .service-card:hover {
-      background: rgba(255,255,255,0.07);
-      border-color: rgba(201,168,76,0.25);
-      transform: translateY(-4px);
-    }
-
-    .service-icon {
-      width: 54px;
-      height: 54px;
-      background: rgba(201,168,76,0.12);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      margin-bottom: 18px;
-      border: 1px solid rgba(201,168,76,0.2);
-    }
-
-    .service-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 10px;
-    }
-
-    .service-card p {
-      color: rgba(255,255,255,0.5);
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .service-items {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      margin-bottom: 22px;
-    }
-
-    .service-items li {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.65);
-    }
-
-    .service-items li::before {
-      content: '';
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--gold);
-      flex-shrink: 0;
-    }
-
-    .btn-service {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: transparent;
-      border: 1px solid rgba(37,211,102,0.4);
-      color: var(--whatsapp);
-      font-family: 'Nunito Sans', sans-serif;
-      font-weight: 700;
-      font-size: 13px;
-      padding: 10px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .btn-service:hover {
-      background: var(--whatsapp);
-      border-color: var(--whatsapp);
-      color: white;
-    }
-
-    .btn-service svg { width: 14px; height: 14px; fill: currentColor; }
-
-    /* ====== WHY US ====== */
-    .why-us {
-      background: var(--off-white);
-      padding: 90px 24px;
-    }
-
-    .why-us-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 28px;
-      margin-top: 50px;
-    }
-
-    .why-card {
-      background: white;
-      border-radius: 16px;
-      padding: 32px 26px;
-      border: 1px solid var(--gray-light);
-      text-align: center;
-    }
-
-    .why-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 52px;
-      font-weight: 900;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-
-    .why-card h3 {
-      font-size: 14px;
-      font-weight: 800;
-      color: var(--navy);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-
-    .why-card p {
-      font-size: 14px;
-      color: var(--gray);
-      line-height: 1.55;
-    }
-
-    /* ====== ENGLISH TOURIST SECTION ====== */
-    .tourist-section {
-      background: var(--navy-mid);
-      padding: 80px 24px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .tourist-section::before {
-      content: '🇺🇸 🇨🇦 🇬🇧';
-      position: absolute;
-      font-size: 80px;
-      opacity: 0.04;
-      top: 20px;
-      right: 40px;
-      letter-spacing: 10px;
-    }
-
-    .tourist-inner {
-      max-width: 860px;
-      margin: 0 auto;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .tourist-tag {
-      display: inline-block;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: rgba(255,255,255,0.6);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      padding: 6px 16px;
-      border-radius: 50px;
-      margin-bottom: 20px;
-    }
-
-    .tourist-section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(26px, 3vw, 40px);
-      color: white;
-      font-weight: 700;
-      margin-bottom: 16px;
-      line-height: 1.2;
-    }
-
-    .tourist-section h2 em {
-      font-style: normal;
-      color: var(--gold-light);
-    }
-
-    .tourist-section p {
-      color: rgba(255,255,255,0.6);
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 28px;
-    }
-
-    .tourist-features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 36px;
-    }
-
-    .tourist-feat {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.8);
-      font-size: 13px;
-      font-weight: 600;
-      padding: 9px 16px;
-      border-radius: 50px;
-    }
-
-    /* ====== TESTIMONIALS ====== */
-    .testimonials {
-      background: white;
-      padding: 90px 24px;
-    }
-
-    .testimonials-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      margin-top: 50px;
-    }
-
-    .testimonial-card {
-      background: var(--off-white);
-      border-radius: 16px;
-      padding: 30px;
-      border-left: 3px solid var(--gold);
-      position: relative;
-    }
-
-    .testimonial-stars {
-      color: var(--gold);
-      font-size: 15px;
-      letter-spacing: 2px;
-      margin-bottom: 14px;
-    }
-
-    .testimonial-card p {
-      font-size: 15px;
-      color: var(--text);
-      line-height: 1.7;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-
-    .testimonial-card p::before {
-      content: '"';
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      color: var(--gold-pale);
-      line-height: 0;
-      vertical-align: -18px;
-      margin-right: 4px;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .author-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--navy-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 800;
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-
-    .author-info strong {
-      display: block;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--navy);
-    }
-
-    .author-info span {
-      font-size: 12px;
-      color: var(--gray);
-    }
-
-    /* ====== FAQ ====== */
-    .faq {
-      background: var(--off-white);
-      padding: 90px 24px;
-    }
-
-    .faq-inner {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .faq-list {
-      margin-top: 50px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .faq-item {
-      background: white;
-      border-radius: 12px;
-      border: 1px solid var(--gray-light);
-      overflow: hidden;
-    }
-
-    .faq-question {
-      width: 100%;
-      text-align: left;
-      background: none;
-      border: none;
-      padding: 20px 24px;
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--navy);
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      transition: color 0.2s;
-    }
-
-    .faq-question:hover { color: var(--teal); }
-
-    .faq-arrow {
-      font-size: 18px;
-      color: var(--gold);
-      transition: transform 0.25s;
-      flex-shrink: 0;
-    }
-
-    .faq-item.open .faq-arrow { transform: rotate(180deg); }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease;
-    }
-
-    .faq-item.open .faq-answer { max-height: 300px; }
-
-    .faq-answer-inner {
-      padding: 0 24px 20px;
-      font-size: 14px;
-      color: #4a5e72;
-      line-height: 1.7;
-      border-top: 1px solid var(--gray-light);
-      padding-top: 16px;
-    }
-
-    /* ====== FINAL CTA ====== */
-    .final-cta {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
-      padding: 100px 24px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .final-cta::before {
-      content: '+';
-      position: absolute;
-      font-size: 600px;
-      font-weight: 900;
-      color: rgba(255,255,255,0.015);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      line-height: 1;
-      pointer-events: none;
-    }
-
-    .final-cta-inner {
-      max-width: 720px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .final-cta h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(30px, 4vw, 52px);
-      font-weight: 900;
-      color: white;
-      margin-bottom: 16px;
-      line-height: 1.15;
-    }
-
-    .final-cta h2 em {
-      font-style: normal;
-      color: var(--gold);
-    }
-
-    .final-cta p {
-      color: rgba(255,255,255,0.55);
-      font-size: 17px;
-      margin-bottom: 40px;
-      line-height: 1.6;
-    }
-
-    .final-cta-buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .btn-final-wa {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background: var(--whatsapp);
-      color: white;
-      text-decoration: none;
-      font-family: 'Nunito Sans', sans-serif;
-      font-weight: 800;
-      font-size: 18px;
-      padding: 20px 48px;
-      border-radius: 14px;
-      box-shadow: 0 8px 36px rgba(37,211,102,0.4);
-      transition: all 0.25s;
-      border: none;
-      cursor: pointer;
-      min-width: 340px;
-    }
-
-    .btn-final-wa:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 48px rgba(37,211,102,0.5);
-      background: var(--whatsapp-dark);
-    }
-
-    .btn-final-wa svg { width: 24px; height: 24px; fill: white; }
-
-    .final-note {
-      color: rgba(255,255,255,0.3);
-      font-size: 12px;
-      margin-top: 10px;
-    }
-
-    /* ====== FOOTER ====== */
-    .footer {
-      background: var(--navy);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 40px 24px;
-      text-align: center;
-    }
-
-    .footer-logo {
-      font-family: 'Playfair Display', serif;
-      color: white;
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .footer p {
-      color: rgba(255,255,255,0.3);
-      font-size: 12px;
-      line-height: 1.6;
-    }
-
-    .footer a { color: var(--gold); text-decoration: none; }
-
-    /* ====== FLOATING WA BUTTON ====== */
-    .floating-wa {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      z-index: 999;
-      width: 60px;
-      height: 60px;
-      background: var(--whatsapp);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.5);
-      text-decoration: none;
-      transition: all 0.25s;
-      animation: float-btn 3s ease-in-out infinite;
-      border: none;
-      cursor: pointer;
-    }
-
-    .floating-wa:hover {
-      transform: scale(1.1);
-      box-shadow: 0 10px 36px rgba(37,211,102,0.6);
-      animation: none;
-    }
-
-    .floating-wa svg { width: 30px; height: 30px; fill: white; }
-
-    @keyframes float-btn {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-    }
-
-    .floating-wa-label {
-      position: fixed;
-      bottom: 30px;
-      right: 94px;
-      z-index: 998;
-      background: var(--navy);
-      color: white;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 8px 14px;
-      border-radius: 8px;
-      white-space: nowrap;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-      opacity: 0;
-      transform: translateX(8px);
-      transition: all 0.25s;
-      pointer-events: none;
-    }
-
-    .floating-wa-label::after {
-      content: '';
-      position: absolute;
-      right: -6px;
-      top: 50%;
-      transform: translateY(-50%);
-      border: 6px solid transparent;
-      border-left-color: var(--navy);
-      border-right: none;
-    }
-
-    .floating-wa:hover ~ .floating-wa-label {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    /* ====== RESPONSIVE ====== */
-    @media (max-width: 900px) {
-      .hero-container {
-        grid-template-columns: 1fr;
-        gap: 36px;
-      }
-
-      .hero-image-side {
-        display: flex;
-        justify-content: center;
-        order: -1;
-      }
-
-      .hero-image-frame {
-        max-width: 300px;
-        width: 100%;
-      }
-
-      .hero-image-main {
-        aspect-ratio: 3/4;
-        max-height: 360px;
-        width: 100%;
-      }
-
-      .hero-cert-badge {
-        top: 10px;
-        left: -8px;
-        padding: 8px 10px;
-      }
-
-      .hero-cert-badge strong { font-size: 12px; }
-      .hero-cert-badge span { font-size: 9px; }
-
-      .hero-stat-card {
-        bottom: -12px;
-        left: -8px;
-        padding: 10px 12px;
-        gap: 8px;
-      }
-
-      .stat-text strong { font-size: 18px; }
-      .stat-text span { font-size: 10px; }
-
-      .about-inner { grid-template-columns: 1fr; gap: 40px; }
-      .about-images { display: none; }
-      .hero { min-height: auto; padding: 80px 0 60px; }
-    }
-
-    @media (max-width: 600px) {
-      .sticky-header { padding: 0 14px; }
-      .header-logo-text { display: none; }
-      .btn-final-wa { min-width: auto; padding: 18px 28px; font-size: 16px; }
-      .scenarios-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    /* Fade-in animation */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-  </style>
-</head>
-<body>
-
-  <!-- ====== STICKY HEADER ====== -->
-  <header class="sticky-header">
-    <div class="header-logo">
-      <div class="header-logo-icon" style="background:none; padding:0; overflow:hidden;">
-        <img src="logo.webp" alt="Dr. Calvario" style="width:38px; height:38px; border-radius:50%; object-fit:cover; display:block;">
-      </div>
-      <div class="header-logo-text">
-        <strong>Dr. Calvario</strong>
-        <span>Traumatólogo · Ortopedista · Pto. Vallarta</span>
-      </div>
-    </div>
-    <div class="header-cta">
-      <a href="#" class="btn-whatsapp-header" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20necesito%20una%20consulta%20ortopédica.%20¿Puede%20atenderme%3F', '_blank'); return false;">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Consulta por WhatsApp
-      </a>
-    </div>
-  </header>
-
-  <!-- ====== URGENT BAR ====== -->
-  <div class="urgent-bar">
-    <p>⚠️ ¿Emergencia ortopédica? Llame o escriba ahora: <a href="tel:+5215529624239">+52 1 55 2962 4239</a> — Atención inmediata disponible</p>
-  </div>
-
-  <!-- ====== HERO ====== -->
-  <section class="hero">
-    <svg class="hero-watermark" viewBox="0 0 100 100" fill="white"><rect x="40" y="10" width="20" height="80" rx="4"/><rect x="10" y="40" width="80" height="20" rx="4"/></svg>
-
-    <div class="hero-container">
-      <!-- Left content -->
-      <div class="hero-content">
-        <div class="hero-badge">Disponible en Puerto Vallarta</div>
-        <h1>Traumatólogo y<br>Ortopedista<br>en <em>Puerto Vallarta</em></h1>
-        <p class="hero-subtitle">
-          El Dr. Calvario es especialista en cirugía ortopédica y traumatología. Atiende fracturas, lesiones óseas, articulaciones y mucho más. Con experiencia en el Hospital Naval de Puerto Vallarta, brinda atención de excelencia a pacientes locales y turistas.
-        </p>
-
-        <div class="hero-trust-row">
-          <div class="trust-chip"><span>🏥</span> Hospital Naval PVR</div>
-          <div class="trust-chip"><span>🦴</span> Cirugía Ortopédica</div>
-          <div class="trust-chip"><span>🌍</span> Atención en Inglés</div>
-          <div class="trust-chip"><span>⚡</span> Citas Urgentes</div>
-        </div>
-
-        <div class="hero-cta-group">
-          <a href="#" class="btn-whatsapp-main" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20necesito%20una%20consulta.%20¿Puede%20ayudarme%3F', '_blank'); return false;">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Agendar Consulta por WhatsApp
-          </a>
-          <p class="hero-note">Respuesta inmediata · Sin costo por contactar · Atención en Español e Inglés</p>
-        </div>
-      </div>
-
-      <!-- Right image -->
-      <div class="hero-image-side">
-        <div class="hero-image-frame">
-          <img src="imagen1.webp" alt="Dr. Calvario, Traumatólogo y Ortopedista en Puerto Vallarta" class="hero-image-main" onerror="this.style.background='var(--navy-light)'; this.style.minHeight='480px';">
-          <div class="hero-cert-badge">
-            <strong>Cirujano</strong>
-            <span>Certificado</span>
-          </div>
-          <div class="hero-stat-card">
-            <div class="stat-icon">🦴</div>
-            <div class="stat-text">
-              <strong>+500</strong>
-              <span>Cirugías realizadas</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== QUICK SCENARIOS ====== -->
-  <section class="scenarios">
-    <div class="scenarios-inner">
-      <p class="section-label">¿Qué necesita?</p>
-      <h2 class="section-title">Encuentre atención para su situación</h2>
-      <p class="section-subtitle">Haga clic en la opción que mejor describe su caso y se comunicará directamente con el Doctor.</p>
-
-      <div class="scenarios-grid">
-        <div class="scenario-card fade-in">
-          <span class="scenario-emoji">🦴</span>
-          <h3>Fractura o Hueso Roto</h3>
-          <p>Caída, accidente o trauma. Necesita evaluación y tratamiento inmediato de fractura.</p>
-          <a href="#" class="btn-scenario" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20tengo%20una%20posible%20fractura%20y%20necesito%20atención%20urgente.%20¿Puede%20recibirme%3F', '_blank'); return false;">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Escribir al Doctor
-          </a>
-        </div>
-
-        <div class="scenario-card fade-in">
-          <span class="scenario-emoji">🧒</span>
-          <h3>Lesión en un Niño</h3>
-          <p>Su hijo tuvo un accidente. Atención pediátrica ortopédica con experiencia y delicadeza.</p>
-          <a href="#" class="btn-scenario" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20mi%20hijo%20tuvo%20un%20accidente%20y%20puede%20tener%20una%20fractura.%20¿Puede%20atendernos%3F', '_blank'); return false;">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Escribir al Doctor
-          </a>
-        </div>
-
-        <div class="scenario-card fade-in">
-          <span class="scenario-emoji">🏃</span>
-          <h3>Lesión Deportiva</h3>
-          <p>Esguince, desgarro de ligamento, lesión de rodilla o hombro. Diagnóstico y tratamiento especializado.</p>
-          <a href="#" class="btn-scenario" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20tuve%20una%20lesión%20deportiva%20y%20quisiera%20una%20consulta.%20¿Cuándo%20puede%20atenderme%3F', '_blank'); return false;">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Escribir al Doctor
-          </a>
-        </div>
-
-        <div class="scenario-card fade-in">
-          <span class="scenario-emoji">💢</span>
-          <h3>Dolor Articular</h3>
-          <p>Dolor de rodilla, cadera, columna o hombro. Diagnóstico preciso y plan de tratamiento personalizado.</p>
-          <a href="#" class="btn-scenario" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20tengo%20dolor%20articular%20y%20quisiera%20una%20evaluación.%20¿Cuándo%20puede%20atenderme%3F', '_blank'); return false;">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Escribir al Doctor
-          </a>
-        </div>
-
-        <div class="scenario-card fade-in">
-          <span class="scenario-emoji">🌊</span>
-          <h3>Turista en Vallarta</h3>
-          <p>Tuvo un accidente durante su visita. Atención de primer nivel en inglés. We speak English.</p>
-          <a href="#" class="btn-scenario" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hello+Doctor%2C+I%27m+a+tourist+in+Puerto+Vallarta+and+I+need+orthopedic+care.+Can+you+help+me%3F', '_blank'); return false;">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Contact Doctor (English)
-          </a>
-        </div>
-
-        <div class="scenario-card fade-in">
-          <span class="scenario-emoji">🦯</span>
-          <h3>Segunda Opinión Médica</h3>
-          <p>Ya tiene un diagnóstico pero desea confirmar o explorar otras opciones de tratamiento.</p>
-          <a href="#" class="btn-scenario" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20quisiera%20una%20segunda%20opinión%20sobre%20mi%20diagnóstico%20ortopédico.%20¿Puede%20atenderme%3F', '_blank'); return false;">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Escribir al Doctor
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== ABOUT ====== -->
-  <section class="about">
-    <div class="about-inner">
-      <div class="about-images">
-        <img src="imagen1.webp" alt="Dr. Calvario en consultorio" class="about-img-main" onerror="this.style.background='var(--gray-light)';">
-        <img src="imagen3.jpg" alt="Dr. Calvario en procedimiento" class="about-img-secondary" onerror="this.style.background='var(--navy-light)';">
-      </div>
-
-      <div class="about-content fade-in">
-        <div class="about-gold-line"></div>
-        <p class="section-label" style="text-align:left; margin-bottom:8px;">El Especialista</p>
-        <h2>El Dr. Calvario:<br>Experiencia que<br><em>genera confianza</em></h2>
-        <p>El Dr. Calvario es un cirujano ortopedista y traumatólogo con sólida formación académica y amplia experiencia clínica. Vinculado al Hospital Naval de Puerto Vallarta, ha atendido a miles de pacientes con lesiones que van desde fracturas simples hasta cirugías de alta complejidad.</p>
-        <p>Su enfoque combina la precisión quirúrgica con un trato cálido y humano, entendiendo que una lesión ósea no solo afecta el cuerpo, sino también la vida cotidiana de cada paciente y su familia.</p>
-
-        <ul class="credentials-list">
-          <li>
-            <div class="cred-icon">🎓</div>
-            <div>
-              <strong>Especialidad en Traumatología y Ortopedia</strong>
-              <span>Formación médica de alto nivel con enfoque en cirugía ortopédica</span>
-            </div>
-          </li>
-          <li>
-            <div class="cred-icon">🏥</div>
-            <div>
-              <strong>Hospital Naval de Puerto Vallarta</strong>
-              <span>Vinculado a una de las instituciones médicas más reconocidas de la región</span>
-            </div>
-          </li>
-          <li>
-            <div class="cred-icon">🌍</div>
-            <div>
-              <strong>Atención Bilingüe (Español e Inglés)</strong>
-              <span>Atención a turistas internacionales con comunicación clara y efectiva</span>
-            </div>
-          </li>
-          <li>
-            <div class="cred-icon">📋</div>
-            <div>
-              <strong>Diagnóstico Integral</strong>
-              <span>Evaluación completa con interpretación de radiografías, resonancias y tomografías</span>
-            </div>
-          </li>
-        </ul>
-
-        <a href="#" class="btn-whatsapp-main" style="max-width: 360px;" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20quisiera%20agendar%20una%20consulta%20con%20usted.%20¿Tiene%20disponibilidad%3F', '_blank'); return false;">
-          <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:white;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Consultar con el Doctor
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== SERVICES ====== -->
-  <section class="services">
-    <div class="services-inner">
-      <p class="section-label">Especialidades</p>
-      <h2 class="section-title">Servicios Médicos</h2>
-      <p class="section-subtitle">Atención especializada en las principales condiciones ortopédicas y traumatológicas.</p>
-
-      <div class="services-grid">
-        <div class="service-card fade-in">
-          <div class="service-icon">🦴</div>
-          <h3>Traumatología</h3>
-          <p>Diagnóstico y tratamiento de lesiones causadas por accidentes, caídas o trauma directo.</p>
-          <ul class="service-items">
-            <li>Fracturas de huesos largos (fémur, tibia, peroné)</li>
-            <li>Fracturas de muñeca y antebrazo</li>
-            <li>Fracturas de clavícula y hombro</li>
-            <li>Fracturas de tobillo y pie</li>
-            <li>Traumatismos en niños y adultos</li>
-          </ul>
-          <a href="#" class="btn-service" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20necesito%20atención%20por%20traumatología.%20¿Puede%20evaluarme%3F', '_blank'); return false;">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Consultar ahora
-          </a>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon">🦵</div>
-          <h3>Ortopedia General</h3>
-          <p>Corrección de deformidades y tratamiento de enfermedades del sistema musculoesquelético.</p>
-          <ul class="service-items">
-            <li>Artrosis de rodilla y cadera</li>
-            <li>Deformidades de pie y columna</li>
-            <li>Pie plano y hallux valgus</li>
-            <li>Escoliosis y problemas posturales</li>
-            <li>Ortopedia pediátrica</li>
-          </ul>
-          <a href="#" class="btn-service" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20quisiera%20una%20consulta%20de%20ortopedia.%20¿Cuándo%20tiene%20disponibilidad%3F', '_blank'); return false;">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Consultar ahora
-          </a>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon">🔬</div>
-          <h3>Cirugía Ortopédica</h3>
-          <p>Procedimientos quirúrgicos para restaurar la función y calidad de vida del paciente.</p>
-          <ul class="service-items">
-            <li>Osteosíntesis (fijación de fracturas)</li>
-            <li>Artroscopia de rodilla y hombro</li>
-            <li>Reemplazo articular</li>
-            <li>Reparación de tendones y ligamentos</li>
-            <li>Cirugía mínimamente invasiva</li>
-          </ul>
-          <a href="#" class="btn-service" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20me%20informaron%20que%20podría%20necesitar%20una%20cirugía%20ortopédica.%20¿Puede%20evaluarme%3F', '_blank'); return false;">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Consultar ahora
-          </a>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon">🏋️</div>
-          <h3>Medicina Deportiva</h3>
-          <p>Especialización en lesiones del deportista y rehabilitación para una pronta recuperación.</p>
-          <ul class="service-items">
-            <li>Lesiones de rodilla (ligamento cruzado)</li>
-            <li>Roturas del manguito rotador</li>
-            <li>Esguinces y distensiones</li>
-            <li>Tendinitis y bursitis</li>
-            <li>Fracturas por estrés</li>
-          </ul>
-          <a href="#" class="btn-service" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20tuve%20una%20lesión%20deportiva%20y%20quisiera%20evaluación.%20¿Cuándo%20puede%20atenderme%3F', '_blank'); return false;">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Consultar ahora
-          </a>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon">👶</div>
-          <h3>Ortopedia Pediátrica</h3>
-          <p>Atención especial para niños con fracturas, deformidades o problemas ortopédicos del desarrollo.</p>
-          <ul class="service-items">
-            <li>Fracturas en la edad de crecimiento</li>
-            <li>Displasia de cadera</li>
-            <li>Pie zambo congénito</li>
-            <li>Deformidades en miembros</li>
-            <li>Seguimiento del desarrollo óseo</li>
-          </ul>
-          <a href="#" class="btn-service" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20necesito%20atención%20ortopédica%20pediátrica%20para%20mi%20hijo.%20¿Puede%20atendernos%3F', '_blank'); return false;">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Consultar ahora
-          </a>
-        </div>
-
-        <div class="service-card fade-in">
-          <div class="service-icon">🦾</div>
-          <h3>Rehabilitación Ortopédica</h3>
-          <p>Plan de recuperación integral post-cirugía o post-fractura para retomar su vida normal.</p>
-          <ul class="service-items">
-            <li>Seguimiento post-quirúrgico</li>
-            <li>Control de evolución de fracturas</li>
-            <li>Indicaciones de fisioterapia</li>
-            <li>Retiro de material de osteosíntesis</li>
-            <li>Control de implantes articulares</li>
-          </ul>
-          <a href="#" class="btn-service" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20estoy%20en%20proceso%20de%20recuperación%20y%20quisiera%20seguimiento%20médico.%20¿Puede%20atenderme%3F', '_blank'); return false;">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Consultar ahora
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== WHY US ====== -->
-  <section class="why-us">
-    <div class="why-us-inner">
-      <p class="section-label">Por qué elegir al Dr. Calvario</p>
-      <h2 class="section-title">Razones para confiar en su atención</h2>
-      <div class="why-grid">
-        <div class="why-card fade-in">
-          <div class="why-number">+15</div>
-          <h3>Años de Experiencia</h3>
-          <p>Trayectoria sólida en traumatología y cirugía ortopédica con cientos de procedimientos realizados.</p>
-        </div>
-        <div class="why-card fade-in">
-          <div class="why-number">24h</div>
-          <h3>Respuesta Rápida</h3>
-          <p>Atención de emergencias ortopédicas. Contacto directo por WhatsApp para evaluación inmediata.</p>
-        </div>
-        <div class="why-card fade-in">
-          <div class="why-number">100%</div>
-          <h3>Diagnóstico Preciso</h3>
-          <p>Evaluación integral con interpretación de estudios de imagen para un plan de tratamiento certero.</p>
-        </div>
-        <div class="why-card fade-in">
-          <div class="why-number">2</div>
-          <h3>Idiomas</h3>
-          <p>Atención en español e inglés para que usted o sus familiares turistas puedan comunicarse sin barreras.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== TOURIST SECTION (ENGLISH) ====== -->
-  <section class="tourist-section">
-    <div class="tourist-inner">
-      <span class="tourist-tag">For International Tourists · Para Turistas Internacionales</span>
-      <h2>Injured During Your Visit to<br><em>Puerto Vallarta?</em></h2>
-      <p>Accidents happen. Whether you fell while surfing, hiking, or simply slipped — Dr. Calvario offers immediate orthopedic care for tourists and expats in Puerto Vallarta. English-speaking care with hospital-level expertise.</p>
-
-      <div class="tourist-features">
-        <span class="tourist-feat">🇺🇸 English-Speaking Doctor</span>
-        <span class="tourist-feat">⚡ Immediate WhatsApp Response</span>
-        <span class="tourist-feat">🏥 Hospital Naval Affiliated</span>
-        <span class="tourist-feat">🩻 X-Ray & Imaging Interpretation</span>
-        <span class="tourist-feat">✈️ Travel-Ready Treatment Plans</span>
-      </div>
-
-      <a href="#" class="btn-whatsapp-main" style="margin: 0 auto;" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hello+Doctor%2C+I%27m+a+tourist+in+Puerto+Vallarta+and+I+need+orthopedic+evaluation.+Can+you+help+me%3F', '_blank'); return false;">
-        <svg viewBox="0 0 24 24" style="fill:white;width:22px;height:22px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Contact Dr. Calvario on WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <!-- ====== TESTIMONIALS ====== -->
-  <section class="testimonials">
-    <div class="testimonials-inner">
-      <p class="section-label">Lo que dicen los pacientes</p>
-      <h2 class="section-title">Testimonios de Pacientes</h2>
-      <p class="section-subtitle">Personas reales que confiaron en el Dr. Calvario para recuperar su bienestar.</p>
-
-      <div class="testimonials-grid">
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>Mi esposo sufrió una fractura de pierna en la playa y el Doctor Calvario nos atendió de forma inmediata. Explicó todo con claridad, operó con éxito y hoy mi esposo ya camina normal. Eternamente agradecidos.</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">MR</div>
-            <div class="author-info">
-              <strong>María R.</strong>
-              <span>Paciente de traumatología · Puerto Vallarta</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>Came to Puerto Vallarta as a tourist and broke my wrist while surfing. Dr. Calvario was incredibly professional, spoke perfect English, and took care of everything. Outstanding doctor!</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">JS</div>
-            <div class="author-info">
-              <strong>James S.</strong>
-              <span>Tourist patient · California, USA</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>Mi hijo de 8 años se cayó y se fracturó el codo. Estaba muy asustado pero el Doctor Calvario lo tranquilizó desde el primer momento. La cirugía fue perfecta y la recuperación muy rápida. Excelente pediatra ortopédico.</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">LC</div>
-            <div class="author-info">
-              <strong>Laura C.</strong>
-              <span>Madre de paciente pediátrico · Guadalajara</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card fade-in">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>Llevaba meses con dolor de rodilla por una lesión deportiva. El Dr. Calvario diagnosticó correctamente, me operó por artroscopia y en pocos meses volví a correr. Altamente recomendado.</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">AR</div>
-            <div class="author-info">
-              <strong>Andrés R.</strong>
-              <span>Paciente de medicina deportiva · Puerto Vallarta</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== FAQ ====== -->
-  <section class="faq">
-    <div class="faq-inner">
-      <p class="section-label">Preguntas Frecuentes</p>
-      <h2 class="section-title">Todo lo que necesita saber</h2>
-
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            ¿Cómo puedo agendar una consulta con el Dr. Calvario?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              La forma más rápida es escribir directamente por WhatsApp al número +52 1 55 2962 4239. El Doctor o su equipo responderán a la brevedad para coordinar la consulta según la urgencia de su caso.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            ¿El Doctor atiende emergencias ortopédicas?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Sí. El Dr. Calvario atiende urgencias ortopédicas como fracturas, luxaciones y lesiones por trauma. Si usted o un familiar tuvo un accidente, comuníquese de inmediato por WhatsApp para una evaluación prioritaria.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            ¿Atiende a turistas extranjeros en inglés?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Sí. El Dr. Calvario brinda atención en inglés para turistas y residentes internacionales en Puerto Vallarta. Puede escribirle en inglés directamente al WhatsApp y recibirá respuesta en ese idioma.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            ¿El Doctor realiza cirugías? ¿En qué hospital?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Sí, el Dr. Calvario realiza cirugías ortopédicas y de traumatología. Está vinculado al Hospital Naval de Puerto Vallarta, una institución de prestigio en la región. Durante la consulta, le informará sobre el hospital específico donde se realizará el procedimiento.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            ¿Qué documentos o estudios debo llevar a la consulta?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Si ya cuenta con radiografías, tomografías o resonancias magnéticas, llévelas a la consulta. También es útil traer cualquier historial médico relevante. En caso de emergencia, no es necesario esperar para tener estudios previos — el Dr. Calvario realizará una evaluación inicial de inmediato.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            ¿Cuánto tiempo tarda en recuperarse de una fractura?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              El tiempo de recuperación depende del tipo de fractura, la edad del paciente y el tratamiento indicado. En términos generales, fracturas simples pueden consolidar en 4 a 8 semanas, mientras que fracturas complejas o que requieren cirugía pueden tomar 3 a 6 meses para una recuperación completa. El Dr. Calvario le dará un pronóstico específico para su caso.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== FINAL CTA ====== -->
-  <section class="final-cta">
-    <div class="final-cta-inner">
-      <h2>¿Listo para recibir<br>atención <em>especializada?</em></h2>
-      <p>No espere más. Escriba ahora al Dr. Calvario y reciba orientación médica de un especialista en traumatología y ortopedia en Puerto Vallarta.</p>
-
-      <div class="final-cta-buttons">
-        <a href="#" class="btn-final-wa" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20quisiera%20agendar%20una%20consulta%20ortopédica.%20¿Cuándo%20puede%20atenderme%3F', '_blank'); return false;">
-          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Agendar Consulta por WhatsApp
-        </a>
-        <p class="final-note">+52 1 55 2962 4239 · Respuesta inmediata · Español e Inglés</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== FOOTER ====== -->
-  <footer class="footer">
-    <p class="footer-logo">Dr. Calvario — Traumatólogo y Ortopedista</p>
-    <p>Puerto Vallarta, Jalisco, México<br>
-    WhatsApp: <a href="tel:+5215529624239">+52 1 55 2962 4239</a><br><br>
-    © 2025 Dr. Calvario. Todos los derechos reservados.
-    </p>
-  </footer>
-
-  <!-- ====== FLOATING WHATSAPP ====== -->
-  <a href="#" class="floating-wa" onclick="fireConversion(); window.open('https://wa.me/5215529624239?text=Hola%20Doctor%2C%20quisiera%20información%20sobre%20una%20consulta%20ortopédica.', '_blank'); return false;" title="Escribir al Dr. Calvario">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-  <div class="floating-wa-label">Escribir al Doctor</div>
-
-  <script>
-    // ====== CONVERSION TRACKING ======
-    function fireConversion() {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-17964727570/6hAZCOOf1fsbEJL6n_ZC',
-          'value': 1.0,
-          'currency': 'COP'
-        });
-      }
-    }
-
-    // ====== FAQ TOGGLE ======
-    function toggleFaq(btn) {
-      const item = btn.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
-    }
-
-    // ====== SCROLL FADE-IN ======
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1E3A5F" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Dr. Calvario" />
+  <link rel="canonical" href="https://doctorcalvario.com/" />
+
+  <title>Dr. Calvario — Clínica Ortopédica en Puerto Vallarta | Traumatólogo y Ortopedista Naval</title>
+  <meta name="description" content="Clínica ortopédica en Puerto Vallarta del Dr. Calvario, Traumatólogo y Ortopedista Naval. Atención especializada en prótesis articulares, cirugía de fracturas, columna y ortopedia pediátrica. Agenda tu valoración por WhatsApp." />
+  <meta name="keywords" content="clinica ortopedica puerto vallarta, ortopedista puerto vallarta, traumatologo puerto vallarta, dr calvario, ortopedista naval, cirujano ortopedico, ortopedista pediatrico" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:title" content="Dr. Calvario — Clínica Ortopédica en Puerto Vallarta" />
+  <meta property="og:description" content="Traumatólogo y Ortopedista Naval en Puerto Vallarta. Atención especializada para adultos y niños." />
+  <meta property="og:image" content="https://doctorcalvario.com/imagen1.webp" />
+  <meta property="og:url" content="https://doctorcalvario.com/" />
+  <meta property="og:site_name" content="Dr. Calvario" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="logo.webp" />
+  <link rel="apple-touch-icon" href="logo.webp" />
+  <link rel="shortcut icon" href="logo.webp" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="global.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["MedicalClinic", "LocalBusiness"],
+        "@id": "https://doctorcalvario.com/#clinica",
+        "name": "Dr. Calvario | Clínica Ortopédica en Puerto Vallarta",
+        "alternateName": ["Dr. Calvario Ortopedista", "Clínica Ortopédica Puerto Vallarta", "Dr. Calvario Traumatólogo"],
+        "description": "Clínica ortopédica en Puerto Vallarta dirigida por el Dr. Calvario, Traumatólogo y Ortopedista Naval. Atención especializada para adultos y niños en prótesis articulares, cirugía de fracturas, columna y ortopedia pediátrica.",
+        "url": "https://doctorcalvario.com/",
+        "logo": "https://doctorcalvario.com/logo.webp",
+        "image": "https://doctorcalvario.com/imagen1.webp",
+        "telephone": "+52-322-100-2451",
+        "priceRange": "$$",
+        "address": { "@type": "PostalAddress", "addressLocality": "Puerto Vallarta", "addressRegion": "Jalisco", "addressCountry": "MX" },
+        "geo": { "@type": "GeoCoordinates", "latitude": 20.627123, "longitude": -105.252075 },
+        "areaServed": [
+          { "@type": "City", "name": "Puerto Vallarta" },
+          { "@type": "City", "name": "Nuevo Vallarta" },
+          { "@type": "City", "name": "Bucerías" },
+          { "@type": "AdministrativeArea", "name": "Bahía de Banderas" }
+        ],
+        "medicalSpecialty": ["Orthopedic", "OrthopedicSurgery", "PediatricOrthopedics", "Traumatology"],
+        "hasMap": "https://www.google.com/maps/place/Dr.+Calvario+%7C+Ortopedista%2FTraumatologo+Pto.+Vallarta+%7C+Orthopedic+Surgeon",
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "target": { "@type": "EntryPoint", "urlTemplate": "https://wa.me/523221002451", "inLanguage": "es-MX" }
+        }
       },
-      { threshold: 0.1 }
-    );
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+      {
+        "@type": "Physician",
+        "@id": "https://doctorcalvario.com/#medico",
+        "name": "Dr. Calvario",
+        "jobTitle": "Traumatólogo y Ortopedista Naval",
+        "worksFor": { "@id": "https://doctorcalvario.com/#clinica" },
+        "url": "https://doctorcalvario.com/sobre-el-dr-calvario.html",
+        "image": "https://doctorcalvario.com/imagen1.webp",
+        "medicalSpecialty": ["Orthopedic", "OrthopedicSurgery", "PediatricOrthopedics", "Traumatology"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://doctorcalvario.com/" }
+        ]
+      }
+    ]
+  }
   </script>
+</head>
+
+<body data-whats-msg="Hola Dr. Calvario, me gustaría agendar una valoración ortopédica.">
+
+  <div data-include="components/navbar.html"></div>
+  <div data-include="components/hero-video.html"></div>
+
+  <main>
+
+    <section class="section" aria-labelledby="introTitulo">
+      <div class="container container--narrow text-center reveal">
+        <span class="eyebrow">Clínica Ortopédica en Puerto Vallarta</span>
+        <h1 id="introTitulo" style="margin-bottom: var(--sp-5);">Atención ortopédica integral para adultos y niños en Puerto Vallarta</h1>
+        <p class="lead">
+          La clínica del <strong>Dr. Calvario</strong> es un espacio dedicado al diagnóstico, tratamiento quirúrgico y rehabilitación de padecimientos musculoesqueléticos en <strong>Puerto Vallarta, Jalisco</strong>. Como <strong>Traumatólogo y Ortopedista Naval</strong>, el Dr. Calvario reúne tres especialidades en una sola práctica: cirugía ortopédica de articulaciones en adultos, ortopedia pediátrica para niños en crecimiento y cirugía traumatológica de fracturas, columna y extremidades. Los pacientes de Puerto Vallarta, Nuevo Vallarta, Bucerías y toda la Bahía de Banderas encuentran aquí un punto de referencia serio, con tecnología actual y un trato profesional que entiende cada caso.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="split split--reverse">
+          <div class="split__media reveal">
+            <img src="imagen1.webp" alt="Consultorio del Dr. Calvario en Puerto Vallarta" width="720" height="900" loading="lazy" />
+            <div class="split__media-tag">Puerto Vallarta · Jalisco</div>
+          </div>
+          <div class="split__content reveal">
+            <span class="eyebrow">Enfoque médico-naval</span>
+            <h2>Una práctica clínica con disciplina naval y rigor académico</h2>
+            <p>
+              La formación médico-naval aporta al ejercicio ortopédico una disciplina particular: protocolos claros, decisiones firmes bajo presión y atención integral del paciente antes, durante y después de la cirugía. El Dr. Calvario traduce esa disciplina en un estándar de atención que los pacientes en Puerto Vallarta describen como ordenado, explicativo y sin pasos innecesarios.
+            </p>
+            <p>
+              Cada valoración empieza con una entrevista detallada, revisión de estudios de imagen y una exploración física cuidadosa. Solo cuando hay un diagnóstico preciso se plantea el tratamiento, que puede ser conservador —infiltraciones, rehabilitación, inmovilización, terapia física— o quirúrgico, dependiendo del caso. El objetivo no es operar a todos los pacientes, sino indicar la intervención correcta en el momento adecuado.
+            </p>
+            <a href="sobre-el-dr-calvario.html" class="btn btn--ghost mt-4">
+              Conocer al Dr. Calvario
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="catOrtopedicoTitulo">
+      <div class="container">
+        <div class="grid grid--2" style="align-items: center; gap: var(--sp-8);">
+          <div class="reveal">
+            <span class="eyebrow">01 · Adultos · Prótesis y articulaciones</span>
+            <h2 id="catOrtopedicoTitulo">Cirujano Ortopédico en Puerto Vallarta</h2>
+            <p>
+              La cirugía ortopédica en adultos es el pilar clínico de la práctica del Dr. Calvario en Puerto Vallarta. Abarca el tratamiento quirúrgico del desgaste articular avanzado, las lesiones deportivas, los problemas de hombro y rodilla, y la reconstrucción articular mediante prótesis. El dolor articular persistente, la rigidez al caminar o la limitación para realizar actividades cotidianas son señales que justifican una valoración ortopédica formal.
+            </p>
+            <p>
+              Dentro de esta área se realizan prótesis de rodilla, prótesis de cadera y artroscopia de rodilla y hombro como procedimientos principales. Cada intervención se precede de una planeación quirúrgica detallada, análisis de estudios radiográficos y selección de implantes acordes a la anatomía del paciente. La meta es clara: reducir el dolor, restaurar la movilidad y devolverle al paciente la posibilidad de caminar, trabajar y moverse sin restricciones en Puerto Vallarta, Nuevo Vallarta o donde resida.
+            </p>
+            <p>
+              Muchos pacientes llegan después de años tolerando dolor. La valoración ortopédica con el Dr. Calvario permite entender qué está ocurriendo realmente en la articulación —artrosis, lesión meniscal, desgaste del cartílago, inestabilidad— y contar con un plan de tratamiento claro, paso por paso, hasta la recuperación funcional.
+            </p>
+            <a href="cirujano-ortopedico-puerto-vallarta.html" class="btn btn--primary mt-4">
+              Ver área de Cirugía Ortopédica
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <div class="reveal">
+            <div class="grid grid--2" style="gap: var(--sp-4);">
+              <a href="protesis-rodilla-puerto-vallarta.html" class="card-service">
+                <div class="card-service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3"/><path d="M12 11v10"/><path d="M8 21h8"/></svg></div>
+                <h3 class="card-service__title" style="font-size: 1.15rem;">Prótesis de rodilla</h3>
+                <span class="card-service__link">Ver servicio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              </a>
+              <a href="protesis-cadera-puerto-vallarta.html" class="card-service">
+                <div class="card-service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="7" r="4"/><path d="M8 11l-2 10"/><path d="M16 11l2 10"/></svg></div>
+                <h3 class="card-service__title" style="font-size: 1.15rem;">Prótesis de cadera</h3>
+                <span class="card-service__link">Ver servicio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              </a>
+              <a href="artroscopia-puerto-vallarta.html" class="card-service" style="grid-column: span 2;">
+                <div class="card-service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                <h3 class="card-service__title" style="font-size: 1.15rem;">Artroscopia de rodilla y hombro</h3>
+                <span class="card-service__link">Ver servicio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="catPediatricoTitulo">
+      <div class="container">
+        <div class="grid grid--2" style="align-items: center; gap: var(--sp-8);">
+          <div class="reveal">
+            <div class="grid grid--2" style="gap: var(--sp-4);">
+              <a href="displasia-cadera-infantil-puerto-vallarta.html" class="card-service">
+                <div class="card-service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 7h-3a2 2 0 0 1-2-2V2"/><path d="M9 18a4 4 0 0 0 4-4V4l7 7"/><path d="M3 22v-6"/><path d="M9 18H3"/></svg></div>
+                <h3 class="card-service__title" style="font-size: 1.1rem;">Displasia de cadera infantil</h3>
+                <span class="card-service__link">Ver servicio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              </a>
+              <a href="pie-plano-ninos-puerto-vallarta.html" class="card-service">
+                <div class="card-service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L12 8L18 2"/><path d="M6 22L12 16L18 22"/><line x1="12" y1="8" x2="12" y2="16"/></svg></div>
+                <h3 class="card-service__title" style="font-size: 1.1rem;">Pie plano y deformidades</h3>
+                <span class="card-service__link">Ver servicio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              </a>
+              <a href="fracturas-ninos-puerto-vallarta.html" class="card-service" style="grid-column: span 2;">
+                <div class="card-service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 2l2 2-2 2 2 2-2 2 2 2-2 2 2 2"/><path d="M16 22l-2-2 2-2-2-2 2-2-2-2 2-2-2-2"/></svg></div>
+                <h3 class="card-service__title" style="font-size: 1.1rem;">Fracturas y lesiones deportivas pediátricas</h3>
+                <span class="card-service__link">Ver servicio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              </a>
+            </div>
+          </div>
+          <div class="reveal">
+            <span class="eyebrow">02 · Niños · Crecimiento · Deporte infantil</span>
+            <h2 id="catPediatricoTitulo">Cirujano Ortopeda Pediátrico en Puerto Vallarta</h2>
+            <p>
+              La ortopedia pediátrica exige una mirada distinta. Los huesos de los niños están en crecimiento, los ligamentos son más elásticos y muchas condiciones que parecen alarmantes a primera vista son, en realidad, parte del desarrollo normal. La clave está en saber cuándo observar, cuándo tratar y cuándo derivar. El Dr. Calvario atiende en Puerto Vallarta a niños desde recién nacidos hasta adolescentes.
+            </p>
+            <p>
+              Las consultas pediátricas más frecuentes incluyen la displasia de cadera en el lactante, el pie plano que genera dudas en los padres, las alteraciones de rotación de las piernas, las fracturas por caídas o accidentes escolares y las lesiones deportivas de niños activos. Cada caso se explica con claridad a los padres, con apoyo visual de estudios radiográficos cuando existen, para que la familia entienda el diagnóstico y las opciones.
+            </p>
+            <p>
+              Los niños de las colonias de Versalles, Fluvial Vallarta, Zona Hotelera y alrededores encuentran aquí una atención pediátrica especializada, con manejo conservador cuando es posible y tratamiento quirúrgico oportuno cuando es necesario.
+            </p>
+            <a href="cirujano-ortopeda-pediatrico-puerto-vallarta.html" class="btn btn--primary mt-4">
+              Ver área de Ortopedia Pediátrica
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="catCirujanoTitulo">
+      <div class="container">
+        <div class="grid grid--2" style="align-items: center; gap: var(--sp-8);">
+          <div class="reveal">
+            <span class="eyebrow">03 · Trauma · Fracturas · Columna · Extremidades</span>
+            <h2 id="catCirujanoTitulo">Cirujano Traumatólogo en Puerto Vallarta</h2>
+            <p>
+              La cirugía traumatológica cubre el amplio campo de las lesiones óseas, musculares y ligamentarias que requieren intervención quirúrgica para recuperar la función. En Puerto Vallarta, una ciudad con alta actividad turística, deportiva y laboral, las fracturas por caídas, accidentes viales o accidentes laborales son motivo frecuente de consulta urgente. El Dr. Calvario interviene en fracturas complejas mediante osteosíntesis con placas, tornillos o clavos intramedulares según el hueso afectado.
+            </p>
+            <p>
+              Más allá del trauma agudo, esta área incluye el tratamiento quirúrgico de la patología de columna —hernias discales, estenosis del canal, dolor lumbar que no responde a tratamiento conservador— y la cirugía especializada de mano y hombro: síndrome del túnel carpiano, rupturas del manguito rotador, tendinopatías crónicas y lesiones laborales.
+            </p>
+            <p>
+              Cada paciente recibe una valoración integral antes de la cirugía, con análisis de estudios de imagen y, cuando es necesario, coordinación con cardiología, medicina interna o rehabilitación para garantizar el mejor resultado.
+            </p>
+            <a href="cirujano-puerto-vallarta.html" class="btn btn--primary mt-4">
+              Ver área de Cirugía Traumatológica
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <div class="reveal">
+            <div class="grid grid--2" style="gap: var(--sp-4);">
+              <a href="cirugia-fracturas-puerto-vallarta.html" class="card-service" style="grid-column: span 2;">
+                <div class="card-service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12L7 8L11 12L15 8L19 12L21 10"/></svg></div>
+                <h3 class="card-service__title" style="font-size: 1.1rem;">Cirugía de fracturas y osteosíntesis</h3>
+                <span class="card-service__link">Ver servicio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              </a>
+              <a href="cirugia-columna-puerto-vallarta.html" class="card-service">
+                <div class="card-service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20"/><path d="M9 5h6"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg></div>
+                <h3 class="card-service__title" style="font-size: 1.1rem;">Cirugía de columna</h3>
+                <span class="card-service__link">Ver servicio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              </a>
+              <a href="cirugia-mano-hombro-puerto-vallarta.html" class="card-service">
+                <div class="card-service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 11V4a2 2 0 0 1 4 0v7"/><path d="M10 10V3a2 2 0 0 1 4 0v8"/><path d="M14 10V4a2 2 0 0 1 4 0v11"/><path d="M18 8a2 2 0 1 1 4 0v6a7 7 0 0 1-7 7h-2"/></svg></div>
+                <h3 class="card-service__title" style="font-size: 1.1rem;">Cirugía de mano y hombro</h3>
+                <span class="card-service__link">Ver servicio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" aria-labelledby="procesoTitulo">
+      <div class="container">
+        <div class="text-center reveal" style="max-width: 720px; margin: 0 auto;">
+          <span class="eyebrow" style="color: var(--oro-claro);">Proceso de atención</span>
+          <h2 id="procesoTitulo" style="color: var(--blanco);">Cómo es tu valoración ortopédica con el Dr. Calvario</h2>
+          <p style="color: rgba(255, 255, 255, 0.8); margin-top: var(--sp-3);">
+            Un proceso ordenado, sin pasos innecesarios. Desde el primer contacto hasta la recuperación, sabes exactamente qué sigue.
+          </p>
+        </div>
+
+        <div class="process reveal">
+          <div class="process__step">
+            <div class="process__num" style="background: transparent; color: var(--blanco); border-color: var(--oro-suave);">01</div>
+            <h3 class="process__title" style="color: var(--blanco);">Contacto por WhatsApp</h3>
+            <p class="process__text" style="color: rgba(255, 255, 255, 0.7);">Describes tu molestia o la de tu familiar por WhatsApp. Se agenda la fecha de valoración en consultorio.</p>
+          </div>
+          <div class="process__step">
+            <div class="process__num" style="background: transparent; color: var(--blanco); border-color: var(--oro-suave);">02</div>
+            <h3 class="process__title" style="color: var(--blanco);">Consulta y exploración</h3>
+            <p class="process__text" style="color: rgba(255, 255, 255, 0.7);">Entrevista médica, exploración física detallada y revisión de estudios de imagen previos si los tienes.</p>
+          </div>
+          <div class="process__step">
+            <div class="process__num" style="background: transparent; color: var(--blanco); border-color: var(--oro-suave);">03</div>
+            <h3 class="process__title" style="color: var(--blanco);">Diagnóstico y plan</h3>
+            <p class="process__text" style="color: rgba(255, 255, 255, 0.7);">Explicación clara del diagnóstico y de las opciones: desde manejo conservador hasta opciones quirúrgicas.</p>
+          </div>
+          <div class="process__step">
+            <div class="process__num" style="background: transparent; color: var(--blanco); border-color: var(--oro-suave);">04</div>
+            <h3 class="process__title" style="color: var(--blanco);">Tratamiento y seguimiento</h3>
+            <p class="process__text" style="color: rgba(255, 255, 255, 0.7);">Ejecución del plan acordado con seguimiento post-tratamiento hasta que la función esté recuperada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="testimoniosTitulo">
+      <div class="container">
+        <div class="text-center reveal" style="max-width: 680px; margin: 0 auto var(--sp-7);">
+          <span class="eyebrow">Experiencias reales</span>
+          <h2 id="testimoniosTitulo">Lo que dicen los pacientes del Dr. Calvario</h2>
+        </div>
+        <div class="testimonials reveal">
+          <div class="testimonial">
+            <div class="testimonial__stars">★★★★★</div>
+            <p class="testimonial__text">Llevaba más de un año con dolor en la rodilla y muchos médicos solo me daban analgésicos. El Dr. Calvario me explicó con estudios qué estaba pasando realmente y ahora camino sin dolor. Muy agradecida.</p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">M</div>
+              <div class="testimonial__info">
+                <span class="testimonial__name">María G.</span>
+                <span class="testimonial__meta">Versalles, Puerto Vallarta</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__stars">★★★★★</div>
+            <p class="testimonial__text">Mi hijo se cayó jugando futbol y tuvo una fractura. Llegamos con mucho miedo y el doctor nos atendió rápido, nos explicó todo y el niño está perfecto. La atención con niños es diferente, se nota que sabe.</p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">R</div>
+              <div class="testimonial__info">
+                <span class="testimonial__name">Roberto M.</span>
+                <span class="testimonial__meta">Fluvial Vallarta</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__stars">★★★★★</div>
+            <p class="testimonial__text">Me operaron de la cadera y a los 2 dias ya caminaba con apoyo. El trato antes y despues fue excelente, me respondia dudas por whatsapp. Muy recomendado para quien tenga artrosis.</p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">J</div>
+              <div class="testimonial__info">
+                <span class="testimonial__name">Juan Carlos P.</span>
+                <span class="testimonial__meta">Marina Vallarta</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="faqTitulo">
+      <div class="container container--narrow">
+        <div class="text-center reveal" style="margin-bottom: var(--sp-7);">
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2 id="faqTitulo">Lo que los pacientes suelen preguntar</h2>
+        </div>
+
+        <div class="faq reveal">
+          <details class="faq__item">
+            <summary class="faq__question">¿Qué hace un ortopedista naval?</summary>
+            <div class="faq__answer">Un ortopedista naval es un cirujano traumatólogo con formación dentro del sistema médico-naval. Se especializa en el diagnóstico y tratamiento de lesiones del sistema musculoesquelético en adultos y niños, con un énfasis particular en el manejo de trauma, protocolos claros y atención integral del paciente.</div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">¿Cuándo debo consultar a un ortopedista en Puerto Vallarta?</summary>
+            <div class="faq__answer">Es recomendable agendar una valoración ortopédica cuando existe dolor articular o muscular persistente, limitación para caminar, rigidez que no mejora, lesiones deportivas, fracturas, deformidades visibles, problemas de postura en niños o cualquier molestia que afecte tu vida diaria.</div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">¿Atiende a pacientes de Nuevo Vallarta y Bucerías?</summary>
+            <div class="faq__answer">Sí. La clínica del Dr. Calvario recibe pacientes de todas las zonas de Puerto Vallarta, Nuevo Vallarta, Bucerías y la Bahía de Banderas. La comunicación para agenda se realiza principalmente por WhatsApp.</div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">¿Atienden también a niños y adolescentes?</summary>
+            <div class="faq__answer">Sí. La ortopedia pediátrica es una de las tres áreas principales de la clínica. Se atienden desde recién nacidos con displasia de cadera hasta adolescentes con lesiones deportivas o alteraciones de crecimiento.</div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">¿Todos los pacientes terminan en cirugía?</summary>
+            <div class="faq__answer">No. Una parte importante de los pacientes se resuelve con tratamiento conservador: infiltraciones, rehabilitación, inmovilización o terapia física. La cirugía se indica únicamente cuando hay razones claras y se explica al paciente con detalle antes de tomar cualquier decisión.</div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">¿Cómo agendo una valoración con el Dr. Calvario?</summary>
+            <div class="faq__answer">La vía principal es por WhatsApp al +52 322 100 2451. Puedes describir tu caso, enviar estudios previos si los tienes y coordinar la fecha de consulta en Puerto Vallarta.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div data-include="components/mapa.html"></div>
+    <div data-include="components/bloque-colonias.html"></div>
+    <div data-include="components/cta-valoracion.html"></div>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+  <div data-include="components/whatsapp-float.html"></div>
+  <script src="components-loader.js" defer></script>
 </body>
 </html>

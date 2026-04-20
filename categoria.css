@@ -1,0 +1,79 @@
+/* =========================================================
+   CATEGORIA.CSS — Estilos para páginas de categoría secundaria
+   Cirujano Ortopédico / Ortopeda Pediátrico / Cirujano
+   ========================================================= */
+
+/* ---------- Hero de categoría (más compacto que el home) ---------- */
+.cat-hero {
+  position: relative; padding: 140px 0 var(--sp-9);
+  background: linear-gradient(135deg, var(--azul-tinta) 0%, var(--azul-naval) 55%, var(--azul-naval-light) 100%);
+  color: var(--blanco); overflow: hidden;
+}
+.cat-hero::before { content: ""; position: absolute; top: -30%; right: -15%; width: 70%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(59, 123, 184, 0.4) 0%, transparent 65%); pointer-events: none; }
+.cat-hero::after { content: ""; position: absolute; bottom: -40%; left: -20%; width: 60%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(201, 169, 97, 0.15) 0%, transparent 70%); pointer-events: none; }
+.cat-hero__inner { position: relative; z-index: 1; }
+.cat-hero .breadcrumbs { color: rgba(255, 255, 255, 0.7); padding-top: 0; padding-bottom: var(--sp-5); }
+.cat-hero .breadcrumbs a { color: rgba(255, 255, 255, 0.75); }
+.cat-hero .breadcrumbs a:hover { color: var(--oro-claro); }
+.cat-hero .breadcrumbs__sep { color: rgba(255, 255, 255, 0.4); }
+.cat-hero .breadcrumbs__current { color: var(--oro-claro); }
+
+.cat-hero__eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.22); border-radius: var(--r-full); font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--oro-claro); margin-bottom: var(--sp-4); }
+.cat-hero__eyebrow::before { content: ""; width: 6px; height: 6px; background: var(--oro-suave); border-radius: 50%; }
+
+.cat-hero__title { font-family: var(--ff-display); font-variation-settings: "opsz" 144, "SOFT" 30; font-size: clamp(2.2rem, 1.5rem + 3vw, 3.75rem); font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; color: var(--blanco); margin-bottom: var(--sp-4); max-width: 820px; }
+.cat-hero__title em { font-style: italic; color: var(--oro-claro); font-variation-settings: "opsz" 144, "SOFT" 100; }
+
+.cat-hero__subtitle { font-size: clamp(1rem, 0.95rem + 0.4vw, 1.2rem); line-height: 1.6; color: rgba(255, 255, 255, 0.85); max-width: 680px; margin-bottom: var(--sp-6); font-weight: 300; }
+
+.cat-hero__ctas { display: flex; flex-wrap: wrap; gap: var(--sp-3); }
+
+/* ---------- Intro de categoría (texto largo, con markup de introducción) ---------- */
+.cat-intro { padding: var(--sp-9) 0; }
+.cat-intro__grid { display: grid; grid-template-columns: 1fr; gap: var(--sp-7); }
+@media (min-width: 900px) { .cat-intro__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: var(--sp-8); } }
+.cat-intro__aside { position: sticky; top: 100px; align-self: start; }
+.cat-intro__stat { padding: var(--sp-5); background: var(--gris-claro); border-radius: var(--r-md); border-left: 3px solid var(--oro-suave); margin-bottom: var(--sp-4); }
+.cat-intro__stat-value { font-family: var(--ff-display); font-size: 1.75rem; font-weight: 500; color: var(--azul-naval); line-height: 1.1; margin-bottom: 4px; }
+.cat-intro__stat-label { font-size: var(--fs-sm); color: var(--gris-medio); line-height: 1.5; }
+.cat-intro__content h2 { margin-bottom: var(--sp-4); }
+.cat-intro__content p { margin-bottom: var(--sp-4); }
+.cat-intro__content p:last-child { margin-bottom: 0; }
+
+/* ---------- Lista de servicios de esta categoría (3 tarjetas grandes) ---------- */
+.cat-servicios { padding: var(--sp-9) 0; background: var(--gris-claro); }
+.cat-servicios__head { text-align: center; max-width: 720px; margin: 0 auto var(--sp-8); }
+.cat-servicios__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--sp-5); }
+
+.svc-card { background: var(--blanco); border-radius: var(--r-lg); overflow: hidden; text-decoration: none; color: inherit; border: 1px solid var(--gris-borde); display: flex; flex-direction: column; transition: all var(--t-base); box-shadow: var(--sh-sm); }
+.svc-card:hover { transform: translateY(-6px); box-shadow: var(--sh-xl); border-color: var(--azul-medio); }
+.svc-card__media { aspect-ratio: 16/10; background: var(--azul-cielo-light); overflow: hidden; position: relative; }
+.svc-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms ease-out; }
+.svc-card:hover .svc-card__media img { transform: scale(1.04); }
+.svc-card__tag { position: absolute; top: var(--sp-4); left: var(--sp-4); background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 6px 12px; border-radius: var(--r-full); font-size: var(--fs-xs); font-weight: 600; color: var(--azul-naval); letter-spacing: 0.08em; text-transform: uppercase; }
+.svc-card__body { padding: var(--sp-6); display: flex; flex-direction: column; gap: var(--sp-3); flex-grow: 1; }
+.svc-card__title { font-family: var(--ff-display); font-size: 1.45rem; font-weight: 500; color: var(--azul-tinta); line-height: 1.2; }
+.svc-card__text { color: var(--gris-medio); font-size: var(--fs-base); line-height: 1.6; flex-grow: 1; }
+.svc-card__footer { display: flex; align-items: center; justify-content: space-between; padding-top: var(--sp-4); border-top: 1px solid var(--gris-borde); margin-top: var(--sp-3); }
+.svc-card__link { display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-sm); font-weight: 600; color: var(--azul-naval); }
+.svc-card__link svg { width: 14px; height: 14px; transition: transform var(--t-base); }
+.svc-card:hover .svc-card__link svg { transform: translateX(4px); }
+.svc-card__whats { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; background: var(--whatsapp); color: var(--blanco); border-radius: var(--r-full); font-size: var(--fs-xs); font-weight: 600; transition: background var(--t-fast); }
+.svc-card__whats:hover { background: var(--whatsapp-dark); }
+.svc-card__whats svg { width: 14px; height: 14px; }
+
+/* ---------- Bloque "por qué el Dr. Calvario" dentro de categoría ---------- */
+.cat-porque { padding: var(--sp-9) 0; }
+.cat-porque__grid { display: grid; grid-template-columns: 1fr; gap: var(--sp-6); }
+@media (min-width: 780px) { .cat-porque__grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); } }
+.cat-porque__item { padding: var(--sp-5); background: var(--blanco); border: 1px solid var(--gris-borde); border-radius: var(--r-md); transition: all var(--t-base); }
+.cat-porque__item:hover { border-color: var(--oro-suave); background: var(--hueso); }
+.cat-porque__icon { width: 48px; height: 48px; border-radius: var(--r-md); background: var(--azul-cielo-light); display: grid; place-items: center; margin-bottom: var(--sp-3); }
+.cat-porque__icon svg { width: 24px; height: 24px; color: var(--azul-naval); }
+.cat-porque__title { font-size: var(--fs-h4); margin-bottom: 6px; color: var(--azul-tinta); }
+.cat-porque__text { font-size: var(--fs-sm); color: var(--gris-medio); line-height: 1.6; }
+
+/* ---------- Preguntas frecuentes específicas de la categoría ---------- */
+.cat-faq { padding: var(--sp-9) 0; background: var(--gris-claro); }
+.cat-faq__head { text-align: center; max-width: 640px; margin: 0 auto var(--sp-6); }
+.cat-faq__list { max-width: 800px; margin: 0 auto; }
